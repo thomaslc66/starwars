@@ -1,10 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The Starwars Galaxy Project
 
 ## Goal
 
 The starwars galaxy app goal is to help you search information on planets from the starwars univers. You are able to search for them using the search field and compare them to each other
 
-## Hot to run the projet on your local comupter
+## How to run the projet on your local comupter
 
 - First of all clone the repository to your local machine.
 - Then using the command line tool of your choice run `yarn install or npm install`
@@ -33,7 +33,7 @@ You will also see any lint errors in the console.
 Command to run after the clone of the repository.
 Will install all required node modules
 
-### `yarn build` also seen previously
+### `yarn build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
