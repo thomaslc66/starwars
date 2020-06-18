@@ -41,6 +41,7 @@ export function getFormatedValue(label: string, value: string) {
   }
 }
 
+// merge array with one item
 export function mergeArrayToItem(array1: any[], item: any) {
   return [...array1, item];
 }

@@ -1,5 +1,6 @@
 import { Planet } from '../planet/IPlanet';
 
+// typescript context galaxy
 export interface GalaxyContext {
   planets: Planet[];
   count: number;

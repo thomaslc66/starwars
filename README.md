@@ -4,6 +4,10 @@
 
 The starwars galaxy app goal is to help you search information on planets from the starwars univers. You are able to search for them using the search field and compare them to each other
 
+## Online demo
+
+An online demo can be found here : [Online demo](https://starwars-five.vercel.app/)
+
 ## How to run the projet on your local comupter
 
 - First of all clone the repository to your local machine.

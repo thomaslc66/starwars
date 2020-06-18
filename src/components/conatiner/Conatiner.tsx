@@ -57,6 +57,7 @@ export function Container(props: any) {
 
   function next(page: number = 1, pageSize?: number) {
     if (searchEnabled) {
+      // request made when a search was mad
       getNextSearchPage(searchValue, page).then(
         (response: AxiosResponse<any>) => {
           parseResults(response, (count: number, results: Planet[]) => {
@@ -65,6 +66,7 @@ export function Container(props: any) {
         }
       );
     } else {
+      // normal request with full planet list
       getNextPage(page).then((response: AxiosResponse<any>) => {
         parseResults(response, (count: number, results: Planet[]) => {
           assignResults(count, results);
@@ -73,13 +75,17 @@ export function Container(props: any) {
     }
   }
 
+  // used in next() method to avoid duplicate
   function assignResults(count: number, planets: Planet[]) {
+    // set count, planet array and stop loading animation
     setCount(count);
     setPlanets(planets);
     setLoading(false);
   }
 
+  // prepare all data for radar graph
   function prepareDataForGraph(item: Planet) {
+    // findIndex return index or -1
     const exist = _.findIndex(comparePlanet, (planet: Planet) => {
       return item.name === planet.name;
     });
@@ -97,12 +103,14 @@ export function Container(props: any) {
     }
   }
 
+  // Set / Save in state all values for Radar graph comparaison
   function setAllValue(planetList: Planet[], keys: string[], data: any[]) {
     setComparePlanet(planetList);
     setRadarKeys(keys);
     setRadarData(data);
   }
 
+  // Radar graph data are tricky and needs to be formated
   function constructGraphData(planetList: Planet[]) {
     return attributes.map((label: string, index: number) => {
       let json: any = { info: labels[index] };
@@ -114,6 +122,7 @@ export function Container(props: any) {
     });
   }
 
+  // Planet can also be remove from radar grph
   function removeFromGraphData(name: string) {
     const planetList = comparePlanet.filter(
       (planet: Planet) => planet.name !== name
@@ -123,6 +132,7 @@ export function Container(props: any) {
     setAllValue(planetList, keys, data);
   }
 
+  // display on click more information/details on the planet
   function openedPlanetDescription(name: string) {
     let planetList: any = [];
     planetList[name] = !descriptionPlanet[name];
@@ -190,13 +200,17 @@ export function Container(props: any) {
                   )}
                 ></List>
               ) : (
-                <Empty></Empty>
+                <Empty
+                  // inline style to override antd's style
+                  style={{ marginTop: '30px' }}
+                />
               )}
             </Col>
           </Row>
           <Row>
             <Col span={20} offset={2}>
               <Pagination
+                // See if pagination can be added directly into antd's List component
                 className='pagination'
                 defaultCurrent={1}
                 total={count}
