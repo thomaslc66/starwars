@@ -2,9 +2,6 @@
   "name": "starwar",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "12.x"
-  },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@nivo/radar": "^0.62.0",
