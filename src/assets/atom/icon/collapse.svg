@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="12px" viewBox="0 0 33 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>atom/icon/collapse</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atom/icon/collapse" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15.5088811,-1.24265851 C15.9819893,-1.5625108 16.591186,-1.5837714 17.0818163,-1.30885102 L17.2124936,-1.22653121 L32.9124936,9.82646879 C33.5898881,10.3033631 33.7524256,11.2390991 33.2755312,11.9164936 C32.8266895,12.5540413 31.9713998,12.735522 31.3075824,12.3570767 L31.1855064,12.2795312 L16.331,1.822 L0.840118937,12.2956585 C0.194188261,12.7323502 -0.66982065,12.5983939 -1.15606091,12.0089494 L-1.24265851,11.8931189 C-1.67935016,11.2471883 -1.54539391,10.3831793 -0.955949417,9.89693909 L-0.840118937,9.81034149 L15.5088811,-1.24265851 Z" id="Path" fill="#001E62" fill-rule="nonzero" transform="translate(16.024487, 5.526575) rotate(180.000000) translate(-16.024487, -5.526575) "></path>
+    </g>
+</svg>

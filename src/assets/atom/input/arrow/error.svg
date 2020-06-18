@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>atom/input/arrow/error</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atom/input/arrow/error" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="atom/icon/error/!" fill="#D40000" fill-rule="nonzero">
+            <path d="M12.2142857,17 C13.0427128,17 13.7142857,17.6715729 13.7142857,18.5 C13.7142857,19.3284271 13.0427128,20 12.2142857,20 C11.3858586,20 10.7142857,19.3284271 10.7142857,18.5 C10.7142857,17.6715729 11.3858586,17 12.2142857,17 Z M12.2142857,5 C13.0427128,5 13.7142857,5.67157288 13.7142857,6.5 L13.7142857,13.5 C13.7142857,14.3284271 13.0427128,15 12.2142857,15 C11.3858586,15 10.7142857,14.3284271 10.7142857,13.5 L10.7142857,6.5 C10.7142857,5.67157288 11.3858586,5 12.2142857,5 Z M12,24 C18.627417,24 24,18.627417 24,12 C24,5.372583 18.627417,0 12,0 C5.372583,0 0,5.372583 0,12 C0,18.627417 5.372583,24 12,24 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

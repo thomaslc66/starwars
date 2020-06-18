@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>atom/icon/settings/vibrations</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atom/icon/settings/vibrations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Combined-Shape" fill="#001E62" fill-rule="nonzero" x="8" y="3" width="8" height="17" rx="2"></rect>
+        <path d="M21,4 C22.3333333,6.55366076 23,9.07805205 23,11.5731739 C23,14.0682957 22.3333333,16.5439044 21,19" id="Line-10-Copy" stroke="#001E62" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M1,4 C3,6.55366076 4,9.07805205 4,11.5731739 C4,14.0682957 3,16.5439044 1,19" id="Line-10-Copy" stroke="#001E62" stroke-width="2" stroke-linecap="round" transform="translate(2.500000, 11.500000) rotate(-180.000000) translate(-2.500000, -11.500000) "></path>
+        <path d="M18.8543422,14.8269647 C20.3818859,12.9788169 20.3818859,10.0212457 18.8543422,8.17309792 C18.6584197,7.94170815 18.3409852,7.94230222 18.1458144,8.17488012 C18.0566221,8.28062436 18.0047603,8.42201271 18,8.57112396 L18,14.4286416 C18.0107732,14.7565676 18.2432746,15.0123141 18.519871,14.9995417 C18.6456422,14.993898 18.7648993,14.9321149 18.8543422,14.8269647" id="Path" fill="#001E62" fill-rule="nonzero"></path>
+        <path d="M4.85434218,14.8269647 C6.38188594,12.9788169 6.38188594,10.0212457 4.85434218,8.17309792 C4.65841972,7.94170815 4.34098525,7.94230222 4.14581441,8.17488012 C4.05662209,8.28062436 4.00476026,8.42201271 4,8.57112396 L4,14.4286416 C4.01077323,14.7565676 4.24327456,15.0123141 4.51987097,14.9995417 C4.64564217,14.993898 4.76489931,14.9321149 4.85434218,14.8269647" id="Path" fill="#001E62" fill-rule="nonzero" transform="translate(5.000000, 11.500000) rotate(-180.000000) translate(-5.000000, -11.500000) "></path>
+    </g>
+</svg>

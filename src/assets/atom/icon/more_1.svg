@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>atom/icon/more</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atom/icon/more" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,13 C8.65685425,13 10,14.3431458 10,16 C10,17.6568542 8.65685425,19 7,19 C5.34314575,19 4,17.6568542 4,16 C4,14.3431458 5.34314575,13 7,13 Z M16,13 C17.6568542,13 19,14.3431458 19,16 C19,17.6568542 17.6568542,19 16,19 C14.3431458,19 13,17.6568542 13,16 C13,14.3431458 14.3431458,13 16,13 Z M25,13 C26.6568542,13 28,14.3431458 28,16 C28,17.6568542 26.6568542,19 25,19 C23.3431458,19 22,17.6568542 22,16 C22,14.3431458 23.3431458,13 25,13 Z" id="Combined-Shape" fill="#001E62" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>atom/icon/form/hous-small</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atom/icon/form/hous-small" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group" transform="translate(2.000000, 3.000000)" stroke="#001E62" stroke-width="2">
+            <polyline id="Path-5" points="0 10 10 0 20 10"></polyline>
+            <polyline id="Path-4" points="8 18 3 18 3 8"></polyline>
+            <polyline id="Path-4-Copy" points="13 18 17 18 17 8"></polyline>
+            <polyline id="Path-6" points="8 18 8 12 13 12 13 18"></polyline>
+        </g>
+    </g>
+</svg>
