@@ -2,6 +2,10 @@
   "name": "starwar",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.14.4",
+    "node": "13.12.0"
+  },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@nivo/radar": "^0.62.0",
@@ -43,5 +47,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2"
+  }
 }

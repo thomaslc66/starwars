@@ -1,22 +1,40 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
+import { Container } from './components/conatiner/Conatiner';
+import { SearchBar } from './components/searchbar/SearchBar';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Component rendering', () => {
+  // Tests will go here using `it` blocks
+  it('renders App', () => {
+    shallow(<App />);
+  });
+
+  it('renders Container', () => {
+    shallow(<Container />);
+  });
+
+  it('renders SearchBar', () => {
+    shallow(<SearchBar />);
+  });
 });
 
-test('renders title "Star wars Galaxy"', () => {
-  const { getByText } = render(<App />);
-  const title = getByText(/Star wars Galaxy/i);
-  expect(title).toBeInTheDocument();
-});
+describe('List test', () => {
+  it('display list of planet', () => {
+    const { getByTestId, getByText } = render(<SearchBar />);
+    const input = getByTestId('search-input');
+    input.value = 'Tatouine';
+    //fireEvent.click(getByText('Search'));
+    expect(input.value).toBe('Tatouine');
+  });
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  it('display list of planet', () => {
+    const { getByTestId, getByText } = render(<Container />);
+    const input = getByTestId('search-input');
+    input.value = 'Tatouine';
+    //fireEvent.click(getByText('Search'));
+    expect(input.value).toBe('Tatouine');
+  });
 });

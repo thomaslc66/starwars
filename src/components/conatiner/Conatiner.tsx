@@ -1,20 +1,21 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { getNextPage, getNextSearchPage } from '../../utils/Axios';
-import { Spin, List, Row, Col, Pagination, Empty, Descriptions } from 'antd';
+import { Spin, List, Row, Col, Pagination, Empty } from 'antd';
 import {
   getFormatedValue,
   parseResults,
   mergeArrayToItem,
 } from '../../utils/Utils';
 import 'antd/dist/antd.css';
-import { Planet, Description } from '../planet/IPlanet';
+import { Planet } from '../planet/IPlanet';
+import { AxiosResponse } from 'axios';
 import { RadarGraph } from '../graph/RadarGraph';
 import './Style.css';
 import { galaxyContext } from '../../context/galaxyContext';
-import { ReactComponent as VirusSmall } from '../../assets/atom/icon/form/virus-small.svg';
-import { ReactComponent as Close } from '../../assets/atom/icon/close.svg';
-import { ReactComponent as Plus } from '../../assets/atom/icon/plus.svg';
+import { VirusIcon } from '../../utils/Icons';
 import _ from 'lodash';
+import { Description } from '../description/Description';
+import { notification } from 'antd';
 
 export function Container(props: any) {
   const attributes = [
@@ -43,7 +44,6 @@ export function Container(props: any) {
     searchEnabled,
     searchValue,
   } = useContext(galaxyContext);
-  const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(true);
   const [radarKeys, setRadarKeys] = useState([] as string[]);
   const [descriptionPlanet, setDescritpionPlanet] = useState([] as any);
@@ -52,17 +52,20 @@ export function Container(props: any) {
 
   useEffect(() => {
     next(); // call first page of planets
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // [] run only at mount and avoid loop
 
   function next(page: number = 1, pageSize?: number) {
     if (searchEnabled) {
-      getNextSearchPage(searchValue, page).then((response) => {
-        parseResults(response, (count: number, results: Planet[]) => {
-          assignResults(count, results);
-        });
-      });
+      getNextSearchPage(searchValue, page).then(
+        (response: AxiosResponse<any>) => {
+          parseResults(response, (count: number, results: Planet[]) => {
+            assignResults(count, results);
+          });
+        }
+      );
     } else {
-      getNextPage(page).then((response) => {
+      getNextPage(page).then((response: AxiosResponse<any>) => {
         parseResults(response, (count: number, results: Planet[]) => {
           assignResults(count, results);
         });
@@ -86,6 +89,11 @@ export function Container(props: any) {
       const keys = mergeArrayToItem(radarKeys, item.name);
       const data = constructGraphData(planetList);
       setAllValue(planetList, keys, data);
+    } else {
+      notification.info({
+        message: 'Look at the radar graph',
+        description: `${item.name} is already added`,
+      });
     }
   }
 
@@ -129,10 +137,16 @@ export function Container(props: any) {
             <Col span={20} offset={2}>
               {planets.length > 0 ? (
                 <List
+                  data-testid='planet-list'
                   dataSource={planets}
                   split={true}
                   renderItem={(planet: any, index: number) => (
                     <List.Item
+                      // inline style to override antd default style
+                      style={{
+                        borderBottom: '1px solid rgba(218, 218, 218, 0.7)',
+                        padding: '15px 0',
+                      }}
                       key={planet.name}
                       actions={[
                         <button
@@ -154,8 +168,10 @@ export function Container(props: any) {
                       ]}
                     >
                       <List.Item.Meta
-                        style={{ textAlign: 'left' }}
-                        avatar={<VirusSmall />}
+                        style={{
+                          textAlign: 'left',
+                        }}
+                        avatar={<VirusIcon />}
                         title={
                           <span
                             className='fake-link'
@@ -166,36 +182,7 @@ export function Container(props: any) {
                         }
                         description={
                           descriptionPlanet[planet.name] && (
-                            <Descriptions
-                              bordered
-                              title='Planet Information'
-                              size='small'
-                            >
-                              <Descriptions.Item label='Population'>
-                                {planet.population}
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Diameter'>
-                                {planet.diameter} km
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Surface Water'>
-                                {planet.surface_water} %
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Climate'>
-                                {planet.climate}
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Gravity'>
-                                {planet.gravity} G
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Terrain'>
-                                {planet.terrain}
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Rotation period'>
-                                {planet.rotation_period} hours
-                              </Descriptions.Item>
-                              <Descriptions.Item label='Orbital period'>
-                                {planet.orbital_period} days
-                              </Descriptions.Item>
-                            </Descriptions>
+                            <Description planet={planet} />
                           )
                         }
                       />
@@ -214,7 +201,7 @@ export function Container(props: any) {
                 defaultCurrent={1}
                 total={count}
                 showSizeChanger={false}
-                onChange={(page, pageSize) => {
+                onChange={(page: number, pageSize?: number) => {
                   next(page);
                 }}
               />

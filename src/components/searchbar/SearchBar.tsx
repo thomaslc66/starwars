@@ -66,6 +66,7 @@ export function SearchBar(props: any) {
       <Col span={10} offset={7}>
         <form onSubmit={handleSubmit}>
           <Input
+            data-testid='search-input'
             placeholder='Search for a planet'
             value={searchValue}
             onChange={handleInputchange}
