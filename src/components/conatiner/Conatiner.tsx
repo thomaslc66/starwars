@@ -140,7 +140,7 @@ export function Container(props: any) {
   }
 
   return (
-    <div className='container'>
+    <div className='container' data-testid='container'>
       <Spin size='large' spinning={loading}>
         <div>
           <Row>
@@ -203,6 +203,7 @@ export function Container(props: any) {
                 <Empty
                   // inline style to override antd's style
                   style={{ marginTop: '30px' }}
+                  data-testid='empty-component'
                 />
               )}
             </Col>
@@ -212,6 +213,7 @@ export function Container(props: any) {
               <Pagination
                 // See if pagination can be added directly into antd's List component
                 className='pagination'
+                data-testid='pagination'
                 defaultCurrent={1}
                 total={count}
                 showSizeChanger={false}
@@ -221,7 +223,7 @@ export function Container(props: any) {
               />
             </Col>
           </Row>
-          <div className='radar'>
+          <div className='radar' data-testid='radargraph'>
             <RadarGraph data={radarData} keys={radarKeys} />
           </div>
         </div>

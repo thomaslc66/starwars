@@ -62,7 +62,7 @@ export function SearchBar(props: any) {
   }
 
   return (
-    <Row>
+    <Row data-testid='searchbar'>
       <Col span={10} offset={7}>
         <form onSubmit={handleSubmit}>
           <Input
@@ -76,7 +76,12 @@ export function SearchBar(props: any) {
               Search
             </button>
             <span className='spacer' />
-            <button type='button' className='btn blue' onClick={resetSearch}>
+            <button
+              data-testid='reset-btn'
+              type='button'
+              className='btn blue'
+              onClick={resetSearch}
+            >
               Reset
             </button>
           </div>
